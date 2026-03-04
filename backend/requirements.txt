@@ -1,0 +1,72 @@
+# Flask Core
+Flask==3.0.0
+Flask-RESTful==0.3.10
+Flask-CORS==4.0.0
+Flask-JWT-Extended==4.6.0
+Werkzeug==3.0.1
+
+# Database
+Flask-SQLAlchemy==3.1.1
+psycopg2-binary==2.9.9
+alembic==1.13.1
+
+# Redis & Caching
+redis==5.0.1
+Flask-Caching==2.1.0
+
+# Security
+bcrypt==4.1.2
+cryptography==41.0.7
+
+# Validation
+marshmallow==3.20.1
+email-validator==2.1.0
+
+# ML & NLP
+scikit-learn
+joblib==1.3.2
+spacy
+nltk
+numpy
+pandas
+shap
+lime
+
+# PDF Generation
+WeasyPrint==60.1
+Jinja2==3.1.2
+
+# Email
+Flask-Mail==0.9.1
+
+# Task Queue (for async operations)
+celery==5.3.4
+kombu==5.3.4
+
+# Monitoring & Logging
+prometheus-client==0.19.0
+python-json-logger==2.0.7
+
+# Rate Limiting
+Flask-Limiter==3.5.0
+
+# Environment
+python-dotenv==1.0.0
+
+# HTTP Client
+requests==2.31.0
+
+# Testing
+pytest==7.4.3
+pytest-cov==4.1.0
+pytest-flask==1.3.0
+hypothesis==6.92.1
+faker==21.0.0
+
+# Development
+black==23.12.1
+flake8==7.0.0
+mypy==1.7.1
+
+# WSGI Server
+gunicorn==21.2.0
