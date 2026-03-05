@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box, Typography, TextField, Button, Alert, Paper, Link as MuiLink, CircularProgress, Grid, IconButton, InputAdornment, Stack, Avatar } from '@mui/material';
+import { Box, Typography, TextField, Button, Alert, Link as MuiLink, CircularProgress, Grid, IconButton, InputAdornment, Stack, Avatar } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';

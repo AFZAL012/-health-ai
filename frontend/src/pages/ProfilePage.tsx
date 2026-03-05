@@ -1,6 +1,5 @@
 import { Container, Box, Typography, Paper, Avatar, Divider, Grid, Chip, Button } from '@mui/material';
 import { useAuth } from '../contexts/AuthContext';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import SecurityIcon from '@mui/icons-material/Security';
 import EmailIcon from '@mui/icons-material/Email';
 
