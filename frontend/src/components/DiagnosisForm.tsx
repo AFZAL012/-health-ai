@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { API_BASE_URL } from '../apiConfig';
 import {
     Box,
     Typography,
@@ -34,8 +35,8 @@ export const DiagnosisForm = () => {
         setResult(null);
 
         try {
-            // Use environment variable for API URL in production
-            const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/v1/predict/analyze`, {
+            // Use central API URL
+            const response = await axios.post(`${API_BASE_URL}/predict/analyze`, {
                 symptoms: symptoms
             });
             setResult(response.data);

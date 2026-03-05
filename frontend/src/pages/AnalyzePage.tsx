@@ -3,6 +3,7 @@ import { Container, Box, Typography, Button, Paper, Grid, Chip, CircularProgress
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import axios from 'axios';
+import { API_BASE_URL } from '../apiConfig';
 import HealthAndSafetyIcon from '@mui/icons-material/HealthAndSafety';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import AnalyticsIcon from '@mui/icons-material/Analytics';
@@ -53,7 +54,7 @@ const AnalyzePage = () => {
         setError(null);
 
         try {
-            const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/v1/predict/analyze`, {
+            const response = await axios.post(`${API_BASE_URL}/predict/analyze`, {
                 symptoms: selectedSymptoms.join(', ')
             });
 

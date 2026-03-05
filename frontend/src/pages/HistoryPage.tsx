@@ -3,6 +3,7 @@ import { Container, Box, Typography, Paper, Grid, Card, CardContent, Button, Chi
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useAuth } from '../contexts/AuthContext';
+import { API_BASE_URL } from '../apiConfig';
 import AssessmentIcon from '@mui/icons-material/Assessment';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import BarChartIcon from '@mui/icons-material/BarChart';
@@ -27,7 +28,7 @@ const HistoryPage = () => {
 
         const fetchHistory = async () => {
             try {
-                const response = await fetch('http://localhost:5000/api/v1/predict/history', {
+                const response = await fetch(`${API_BASE_URL}/predict/history`, {
                     headers: {
                         'Authorization': `Bearer ${accessToken}`,
                     },
