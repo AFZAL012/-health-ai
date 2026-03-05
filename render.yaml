@@ -18,12 +18,12 @@ services:
         generateValue: true
       - key: CORS_ORIGINS
         fromService:
-          type: static_site
+          type: web
           name: health-ai-frontend
           property: host
 
-  # Frontend Static Site
-  - type: static_site
+  # Frontend Static Site (Defined as type: web with env: static)
+  - type: web
     name: health-ai-frontend
     env: static
     buildCommand: cd frontend && npm install && npm run build
