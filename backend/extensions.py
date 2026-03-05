@@ -11,11 +11,11 @@ cache = Cache()
 mail = Mail()
 from flask import request as flask_request
 
-def skip_options():
-    return flask_request.method == 'OPTIONS'
-
 limiter = Limiter(
     key_func=get_remote_address,
-    default_limits=["1000 per day", "500 per hour"],
-    request_filter=skip_options
+    default_limits=["1000 per day", "500 per hour"]
 )
+
+@limiter.request_filter
+def skip_options():
+    return flask_request.method == 'OPTIONS'

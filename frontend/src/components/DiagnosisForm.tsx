@@ -34,8 +34,8 @@ export const DiagnosisForm = () => {
         setResult(null);
 
         try {
-            // Assuming backend runs on 5000
-            const response = await axios.post('http://localhost:5000/api/v1/predict/analyze', {
+            // Use environment variable for API URL in production
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/v1/predict/analyze`, {
                 symptoms: symptoms
             });
             setResult(response.data);

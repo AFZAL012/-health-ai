@@ -73,7 +73,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
 
     const login = async (email: string, password: string) => {
         try {
-            const response = await axios.post('http://localhost:5000/api/v1/auth/login', {
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/v1/auth/login`, {
                 email,
                 password,
             });
@@ -99,7 +99,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
 
     const verify2FA = async (challengeId: number, otp: string) => {
         try {
-            const response = await axios.post('http://localhost:5000/api/v1/auth/verify-2fa', {
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/v1/auth/verify-2fa`, {
                 challengeId,
                 otp,
             });
@@ -133,7 +133,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
 
     const register = async (email: string, password: string, profile?: any) => {
         try {
-            const response = await axios.post('http://localhost:5000/api/v1/auth/register', {
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/v1/auth/register`, {
                 email,
                 password,
                 profile,

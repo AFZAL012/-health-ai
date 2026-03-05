@@ -53,7 +53,7 @@ const AnalyzePage = () => {
         setError(null);
 
         try {
-            const response = await axios.post('http://localhost:5000/api/v1/predict/analyze', {
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/v1/predict/analyze`, {
                 symptoms: selectedSymptoms.join(', ')
             });
 
